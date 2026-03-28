@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @font-face {
+            font-family: 'Abu Jm Akkas';
+            src: url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', 'Abu Jm Akkas', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .font-bangla {
+            font-family: 'Abu Jm Akkas', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.85);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#7ad5dd",
+                        "outline": "#6e797a",
+                        "outline-variant": "#bdc9ca",
+                        "on-tertiary-fixed": "#0e1e1e",
+                        "primary-fixed": "#96f1fa",
+                        "primary-container": "#007b83",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#004f54",
+                        "surface-container-low": "#f1f4f4",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#d4e6e5",
+                        "on-primary-fixed": "#002022",
+                        "on-secondary-container": "#00731e",
+                        "background": "#f6fafa",
+                        "surface-variant": "#dfe3e3",
+                        "on-tertiary-fixed-variant": "#3a4a49",
+                        "on-secondary-fixed": "#002204",
+                        "surface-container": "#ebeeef",
+                        "on-surface": "#181c1d",
+                        "tertiary": "#495a59",
+                        "surface-container-high": "#e5e9e9",
+                        "on-background": "#181c1d",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary": "#006067",
+                        "inverse-surface": "#2d3132",
+                        "surface-dim": "#d7dbdb",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#e5f7f6",
+                        "surface-tint": "#006970",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#eef1f1",
+                        "tertiary-fixed-dim": "#b8cac9",
+                        "secondary-container": "#91f78e",
+                        "secondary-fixed": "#94f990",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#78dc77",
+                        "secondary": "#006e1c",
+                        "surface-container-highest": "#dfe3e3",
+                        "inverse-primary": "#7ad5dd",
+                        "on-surface-variant": "#3e494a",
+                        "on-secondary-fixed-variant": "#005313",
+                        "on-primary-container": "#d0fbff",
+                        "surface": "#f6fafa",
+                        "surface-bright": "#f6fafa",
+                        "tertiary-container": "#617271"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#f6fafa] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a friendly man with a neat beard and professional attire, soft natural window lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIFuyjRUvbfCIF_pMOvfUAkg049RxclfXOl-gaKDonWN7z4raDMRq1aum5D3mRYkks85vpdFZ9CUL1661wq7u23t_36QqJY3y6qvvm4MXg8-WWKeKYarDfVTxsCKZab2IMZ-v-juDa6oaq7ECrQdih3BkBi80y8K69ojvvIEP_0F5JEcsGMQy6oA5qXLb6n8-B7avSXRHu11kgdnEZ5x8mo3h0uP5wuk_qTGqRSRRuN38aDQxkBzzrRMVfNoHJzDDKyWSuzktqTvs"/>
+</div>
+<h1 class="font-bangla text-2xl font-bold text-[#006067]">ট্র্যাক মি</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-teal-50 transition-colors duration-200 active:scale-95">
+<span class="material-symbols-outlined text-[#007B83]">smart_toy</span>
+</button>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto space-y-8">
+<!-- Hero Section: Daily Status -->
+<section class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary to-primary-container p-8 text-on-primary">
+<div class="relative z-10">
+<p class="font-bangla text-lg opacity-90">আজকের অগ্রগতি</p>
+<h2 class="font-bangla text-4xl font-bold mt-1">৩/৫ সম্পন্ন</h2>
+<div class="mt-6 flex gap-2">
+<span class="px-4 py-1.5 rounded-full bg-white/20 text-sm font-bangla backdrop-blur-md">পরবর্তী: আসর - ৪:৩০</span>
+</div>
+</div>
+<div class="absolute -right-10 -bottom-10 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+</section>
+<!-- Prayer Grid -->
+<section>
+<div class="flex justify-between items-end mb-6">
+<h3 class="font-bangla text-2xl font-bold text-primary">নামাজের সময়সূচী</h3>
+<p class="font-bangla text-on-surface-variant text-sm">২৬ অক্টোবর, ২০২৪</p>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Fajr -->
+<div class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-secondary-fixed/30 text-secondary">
+<span class="material-symbols-outlined" data-weight="fill">wb_twilight</span>
+</div>
+<div>
+<p class="font-bangla font-bold text-lg">ফজর</p>
+<p class="text-sm text-on-surface-variant">০৪:৪৮ মি.</p>
+</div>
+</div>
+<button class="w-12 h-12 rounded-full border-2 border-secondary bg-secondary text-white flex items-center justify-center transition-transform active:scale-90">
+<span class="material-symbols-outlined">check</span>
+</button>
+</div>
+<!-- Dhuhr -->
+<div class="group flex items-center justify-between p-5 bg-surface-container-lowest rounded-2xl transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary-fixed/30 text-primary">
+<span class="material-symbols-outlined" data-weight="fill">light_mode</span>
+</div>
+<div>
+<p class="font-bangla font-bold text-lg">যোহর</p>
+<p class="text-sm text-on-surface-variant">১১:৪৫ মি.</p>
+</div>
+</div>
+<button class="w-12 h-12 rounded-full border-2 border-secondary bg-secondary text-white flex items-center justify-center">
+<span class="material-symbols-outlined">check</span>
+</button>
+</div>
+<!-- Asr -->
+<div class="group flex items-center justify-between p-5 bg-surface-container-low rounded-2xl transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-variant text-on-surface-variant">
+<span class="material-symbols-outlined">wb_sunny</span>
+</div>
+<div>
+<p class="font-bangla font-bold text-lg">আসর</p>
+<p class="text-sm text-on-surface-variant">০৩:৪৫ মি.</p>
+</div>
+</div>
+<button class="w-12 h-12 rounded-full border-2 border-outline-variant flex items-center justify-center text-outline-variant hover:border-primary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">circle</span>
+</button>
+</div>
+<!-- Maghrib -->
+<div class="group flex items-center justify-between p-5 bg-surface-container-low rounded-2xl transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-variant text-on-surface-variant">
+<span class="material-symbols-outlined">dark_mode</span>
+</div>
+<div>
+<p class="font-bangla font-bold text-lg">মাগরিব</p>
+<p class="text-sm text-on-surface-variant">০৫:২৩ মি.</p>
+</div>
+</div>
+<button class="w-12 h-12 rounded-full border-2 border-outline-variant flex items-center justify-center text-outline-variant">
+<span class="material-symbols-outlined">circle</span>
+</button>
+</div>
+<!-- Isha -->
+<div class="group flex items-center justify-between p-5 bg-surface-container-low rounded-2xl transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-variant text-on-surface-variant">
+<span class="material-symbols-outlined">bedtime</span>
+</div>
+<div>
+<p class="font-bangla font-bold text-lg">এশা</p>
+<p class="text-sm text-on-surface-variant">০৬:৩৮ মি.</p>
+</div>
+</div>
+<button class="w-12 h-12 rounded-full border-2 border-outline-variant flex items-center justify-center text-outline-variant">
+<span class="material-symbols-outlined">circle</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Qibla & Qaza Bento Grid -->
+<section class="grid grid-cols-2 gap-4">
+<!-- Qaza Counter -->
+<div class="bg-tertiary-fixed p-6 rounded-[2rem] flex flex-col justify-between aspect-square">
+<div>
+<h4 class="font-bangla font-bold text-xl text-on-tertiary-fixed">কাজায়ে নামাজ</h4>
+<p class="font-bangla text-on-tertiary-fixed-variant text-sm mt-1">মোট অনাদায়ী</p>
+</div>
+<div class="flex items-end justify-between">
+<span class="text-5xl font-extrabold text-on-tertiary-fixed">১২</span>
+<button class="w-10 h-10 rounded-full bg-on-tertiary-fixed text-white flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<!-- Qibla Compass -->
+<div class="bg-surface-container-lowest p-6 rounded-[2rem] flex flex-col items-center justify-center aspect-square relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative w-24 h-24 rounded-full border-2 border-primary-fixed-dim flex items-center justify-center">
+<div class="w-1 h-16 bg-primary rounded-full transform rotate-[280deg] origin-bottom mb-8"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-weight="fill">explore</span>
+</div>
+</div>
+<p class="font-bangla font-bold mt-4 text-primary">কিবলা কম্পাস</p>
+</div>
+</section>
+<!-- Weekly Heatmap -->
+<section class="bg-surface-container-low p-6 rounded-[2.5rem]">
+<div class="flex justify-between items-center mb-6">
+<h4 class="font-bangla font-bold text-lg">সাপ্তাহিক রিপোর্ট</h4>
+<span class="material-symbols-outlined text-on-surface-variant">insights</span>
+</div>
+<div class="flex justify-between items-end gap-2">
+<!-- Simple bar representation for heatmap vibe -->
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full h-12 bg-secondary-fixed rounded-lg"></div>
+<span class="text-[10px] text-on-surface-variant font-medium">শনি</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full h-20 bg-primary rounded-lg"></div>
+<span class="text-[10px] text-on-surface-variant font-medium">রবি</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full h-16 bg-primary-container rounded-lg"></div>
+<span class="text-[10px] text-on-surface-variant font-medium">সোম</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full h-24 bg-primary rounded-lg"></div>
+<span class="text-[10px] text-on-surface-variant font-medium">মঙ্গল</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full h-8 bg-outline-variant/30 rounded-lg"></div>
+<span class="text-[10px] text-on-surface-variant font-medium">বুধ</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full h-14 bg-primary-fixed-dim rounded-lg"></div>
+<span class="text-[10px] text-on-surface-variant font-medium">বৃহঃ</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full h-28 bg-primary rounded-lg"></div>
+<span class="text-[10px] text-on-surface-variant font-medium">শুক্র</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/85 backdrop-blur-md rounded-t-[1.5rem] shadow-[0_-8px_32px_rgba(24,28,29,0.06)] border-t border-[#bdc9ca]/15">
+<a class="flex flex-col items-center justify-center text-[#181c1d]/60 px-3 py-2 transition-all hover:text-[#007B83] active:scale-90" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-bangla text-[10px] font-semibold mt-1">ড্যাশবোর্ড</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#181c1d]/60 px-3 py-2 transition-all hover:text-[#007B83] active:scale-90" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-bangla text-[10px] font-semibold mt-1">টাস্ক</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#007B83] text-white rounded-2xl px-4 py-2 transition-all active:scale-90 shadow-lg shadow-primary/20" href="#">
+<span class="material-symbols-outlined" data-weight="fill">moped</span>
+<span class="font-bangla text-[10px] font-semibold mt-1">নামাজ</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#181c1d]/60 px-3 py-2 transition-all hover:text-[#007B83] active:scale-90" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-bangla text-[10px] font-semibold mt-1">অধ্যয়ন</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#181c1d]/60 px-3 py-2 transition-all hover:text-[#007B83] active:scale-90" href="#">
+<span class="material-symbols-outlined">menu</span>
+<span class="font-bangla text-[10px] font-semibold mt-1">মেনু</span>
+</a>
+</nav>
+</body></html>

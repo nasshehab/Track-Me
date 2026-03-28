@@ -1,0 +1,59 @@
+# Track Me: Bangla Productivity App PRD
+
+## 1. App Overview
+- **Name:** Track Me
+- **Target Audience:** Bangla-speaking users
+- **Theme:** Light, modern, branded, with Bangla font “Abu Jm Akkas”
+- **Core Value:** A unified hub for productivity, religious observance, study, and financial tracking with AI-powered insights.
+
+## 2. Technical Stack (All Free Tier)
+- **Frontend:** Flutter (Latest Stable)
+- **Backend:** Firebase (Auth, Firestore, Storage, Functions)
+- **AI:** Firebase Cloud Functions + Free AI APIs (e.g., Hugging Face)
+- **CI/CD:** Codemagic / GitHub Actions
+- **State Management:** Riverpod (Recommended for its robust provider-based architecture and testability)
+
+## 3. Core Modules & Navigation (Bottom Tabs)
+
+### 3.1 Dashboard
+- **Personalization:** AI Daily Briefing card and motivational tip carousel.
+- **Progress Tracking:** Streak cards (Prayer, Tasks, Study, Savings) and a Weekly Productivity Heatmap.
+- **Overviews:** Namaz completion bars and a Money snapshot (Balance, Savings progress, Expense pie chart).
+
+### 3.2 Daily Task
+- **Features:** Priority levels (High/Medium/Low), due dates, recurrence.
+- **Timer:** Integrated Pomodoro timer icon for each task.
+- **Interaction:** Checkbox with a non-reversible confirmation dialog; Alarm notifications for reminders.
+
+### 3.3 Namaz Tracker
+- **Automation:** Prayer times via `adhan` package based on location.
+- **Tracking:** Check buttons for 5 daily prayers + Qaza tracking.
+- **Tools:** Qibla compass and weekly completion heatmap.
+- **Notifications:** Optional Azan with custom sounds.
+
+### 3.4 Study Tracker
+- **Management:** Subject-based organization.
+- **Focus Tool:** Built-in Pomodoro timer (25/5 split) with alarms.
+- **Analytics:** Study session logs (duration, subject, distractions) and weekly goals with progress bars.
+
+### 3.5 Money Bag
+- **Ledger:** Income and expense tracking with categories.
+- **Analytics:** Expense pie charts and daily/weekly/monthly/yearly bar/line charts using `fl_chart`.
+- **Goals:** Savings goals with target amounts and deadlines.
+- **Advanced:** PDF report export with AI insights; OCR for receipt capture.
+
+### 3.6 Menu & Profile
+- **Profile:** User details (Name, DOB, Blood Group, etc.) and Profile Picture.
+- **Settings:** Theme toggle (Light/Dark), Language (Bangla/English), Notification/Alarm sound customization.
+- **Developer Info:** Dedicated card for Nowshad Abrar Shehab.
+
+## 4. Key Functional Requirements
+- **Authentication:** Email/Password, Google, and Facebook Sign-in.
+- **Offline Support:** Firestore offline persistence; data syncs automatically when online.
+- **AI Integration:** Cloud Functions generating summaries and tips; cached in Firestore for offline viewing.
+- **Notifications:** Local notifications for tasks, study, and prayer times using `flutter_local_notifications`.
+
+## 5. Design Guidelines
+- **Typography:** Primary font is "Abu Jm Akkas".
+- **Visuals:** Use the provided developer photo for the developer identity card.
+- **Interactions:** Smooth micro-interactions and motion graphics.

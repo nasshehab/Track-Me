@@ -1,0 +1,28 @@
+workflows:
+  web-build:
+    name: Web App Build
+    max_build_duration: 15
+
+    environment:
+      node: 18
+
+    scripts:
+      - name: Install dependencies (if any)
+        script: |
+          if [ -f package.json ]; then
+            npm install
+          fi
+
+      - name: Build project (if applicable)
+        script: |
+          if [ -f package.json ]; then
+            npm run build || echo "No build script found"
+          fi
+
+      - name: Prepare artifacts
+        script: |
+          mkdir -p build_output
+          cp -r * build_output/
+
+    artifacts:
+      - build_output/**
