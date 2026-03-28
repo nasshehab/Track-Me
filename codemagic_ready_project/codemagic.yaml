@@ -26,3 +26,8 @@ workflows:
 
     artifacts:
       - build_output/**
+
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
